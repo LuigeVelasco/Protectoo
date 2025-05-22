@@ -1,0 +1,65 @@
+{% extends 'modulo/base.html' %}
+
+{% block title %}Mis Contactos{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    
+    <form method="get" class="search-form">
+        <input type="text" name="buscar" placeholder="Buscar por nombre..." value="{{ request.GET.buscar }}">
+        <input type="hidden" name="filtro" value="{{ filtro }}">
+    
+        <div class="button-group">
+            <button type="submit" class="buscar-btn">🔍 Buscar</button>
+            <a href="{% url 'index' %}" class="reiniciar-btn">🔄 Reiniciar</a>
+        </div>
+    </form>
+    
+        <div class="filtros">
+            <a href="?filtro=todos" class="filter-btn {% if filtro == 'todos' %}active{% endif %}">Todos</a>
+            <a href="?filtro=favoritos" class="filter-btn {% if filtro == 'favoritos' %}active{% endif %}">Favoritos</a>
+            <a href="?filtro=bloqueados" class="filter-btn {% if filtro == 'bloqueados' %}active{% endif %}">Bloqueados</a>
+        </div>
+
+        {% if contactos %}
+            <div class="contact-grid">
+                {% for contacto in contactos %}
+                    <div class="contact-card">
+                        <h3>{{ contacto.nombre }}</h3>
+                        <p>{{ contacto.prefijo }} {{ contacto.numero }}</p>
+                        <div class="contact-icons">
+                            {% if contacto.favorito %}
+                                <span title="Favorito">⭐</span>
+                            {% endif %}
+                            {% if contacto.bloqueado %}
+                                <span title="Bloqueado">🚫</span>
+                            {% endif %}
+                        </div>
+                        <div class="contact-buttons">
+                            <a href="{% url 'detalle_contacto' contacto.id %}" class="button small">Ver más</a>
+                            <form action="{% url 'toggle_favorito' contacto.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="button small yellow">⭐ Favorito</button>
+                            </form>
+                            <form action="{% url 'toggle_bloqueado' contacto.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="button small red">🚫 Bloquear</button>
+                            </form>
+                            <a href="{% url 'editar_contacto' contacto.id %}" class="button small blue">✏️ Editar</a>
+                            <form action="{% url 'eliminar_contacto' contacto.id %}" method="post" onsubmit="return confirm('¿Estás seguro que deseas eliminar este contacto?');">
+                                {% csrf_token %}
+                                <button type="submit" class="button small danger">🗑️ Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No tienes contactos guardados.</p>
+        {% endif %}
+    {% else %}
+    <div style="text-align: center; padding: 2rem;">
+        <a href="{% url 'login' %}" class="big-login-button">Iniciar sesión para ver tus contactos</a>
+    </div>
+    {% endif %}
+{% endblock %}

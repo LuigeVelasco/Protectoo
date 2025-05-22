@@ -1,0 +1,20 @@
+{% extends 'modulo/base.html' %}
+
+{% block title %}Detalle de Contacto{% endblock %}
+
+{% block content %}
+    <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/8102/8102780.png" alt="Contacto" style="width: 100px; height: auto;">
+    </div>
+    
+    <div style="display: flex; justify-content: center; margin-bottom: 10px; font-size: 24px;">
+        <strong>{{ contacto.nombre }}</strong>
+    </div>
+
+    <p><strong>Prefijo:</strong> {{ contacto.prefijo }}</p>
+    <p><strong>Número:</strong> {{ contacto.numero }}</p>
+    <p><strong>Favorito:</strong> {{ contacto.favorito|yesno:"Sí,No" }}</p>
+    <p><strong>Bloqueado:</strong> {{ contacto.bloqueado|yesno:"Sí,No" }}</p>
+    <a href="{% url 'index' %}" class="boton-volver">Volver a la lista</a>
+
+{% endblock %}

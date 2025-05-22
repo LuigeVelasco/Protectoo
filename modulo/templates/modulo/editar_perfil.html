@@ -1,0 +1,16 @@
+{% extends 'modulo/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'modulo/css/perfil.css' %}">
+
+<div class="perfil-container">
+    <h2>Editar Perfil</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">💾 Guardar cambios</button>
+        <a href="{% url 'perfil' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

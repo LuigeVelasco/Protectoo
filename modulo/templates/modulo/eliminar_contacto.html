@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>¿Estás seguro de que deseas eliminar a {{ contacto.nombre }}?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="button danger">Sí, eliminar</button>
+    <a href="{% url 'index' %}" class="button">Cancelar</a>
+</form>
+{% endblock %}

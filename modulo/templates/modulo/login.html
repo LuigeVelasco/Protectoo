@@ -1,0 +1,17 @@
+{% extends 'modulo/base.html' %}
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block content %}
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                <button type="submit" class="boton-login">Entrar</button>
+                <a href="{% url 'registro' %}" class="boton-registro">Registrarse</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

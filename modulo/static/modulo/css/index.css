@@ -1,0 +1,674 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header {
+    background-color: #8000ff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Si quieres centrar los botones en nav-center */
+.nav-center {
+    flex: 1;
+    margin-left: 600px;
+}
+
+.nav-left, .nav-right {
+    flex-shrink: 0;
+}
+
+.btn-nav {
+    padding: 10px 30px;
+    background-color: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.perfil-button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.logout-button {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.logout-form {
+    display: inline-block;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ecf0f1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #1c7fb9;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #c800ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a000cc;
+}
+
+
+a.button-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a.button-link:hover {
+    background-color: #2980b9;
+}
+
+.logout-button {
+    background-color: #e74c3c; /* Rojo suave */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #dfe6e9;
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.icons span {
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+.number {
+    font-size: 1rem;
+    color: #636e72;
+    margin: 0.5rem 0 1rem;
+}
+
+.see-more {
+    align-self: flex-start;
+    padding: 0.4rem 0.8rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.see-more:hover {
+    background-color: #2980b9;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.action-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+.action-button.favorito {
+    background-color: #f1c40f;
+}
+
+.action-button.favorito:hover {
+    background-color: #d4ac0d;
+}
+
+.action-button.bloqueado {
+    background-color: #e74c3c;
+}
+
+.action-button.bloqueado:hover {
+    background-color: #c0392b;
+}
+
+.big-login-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #900add;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.big-login-button:hover {
+    background-color: #680b9d;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #460786;
+    margin-bottom: 1.5rem;
+}
+
+.contact-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.button.small {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background-color: #510773;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button.small:hover {
+    background-color: #2d0144;
+}
+
+.button.small.red {
+    background-color: #e74c3c;
+}
+.button.small.red:hover {
+    background-color: #c0392b;
+}
+
+.button.small.yellow {
+    background-color: #f1c40f;
+    color: black;
+}
+.button.small.yellow:hover {
+    background-color: #d4ac0d;
+}
+
+.button.small.blue {
+    background-color: #3498db;
+}
+.button.small.blue:hover {
+    background-color: #2980b9;
+}
+
+.button.small.danger {
+    background-color: #e74c3c;
+}
+.button.small.danger:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo para los filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    display: inline-block;
+    text-align: center;
+}
+
+.filter-btn:hover {
+    background-color: #6300c7;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background-color: #460786;
+    color: #fff;
+    font-weight: bold;
+}
+
+.filter-btn.active:hover {
+    background-color: #5205a0;
+    transform: scale(1.05);
+}
+
+/* Estilos generales para los botones */
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.button.small {
+    font-size: 0.9rem;
+}
+
+.button.yellow {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+.button.red {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.button.blue {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.button.danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.detalle-contacto {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto-img {
+    width: 100px;        /* Tamaño fijo más controlado */
+    height: auto;
+    display: block;
+    margin: 20px auto;   /* Centrado horizontal y algo de espacio */
+}
+
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #2980b9;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c800ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.boton-volver:hover {
+    background-color: #a000cc;
+}
+
+.boton-registrar {
+    padding: 10px 20px;
+    background-color: #c800ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-registrar:hover {
+    background-color: #a000cc;
+}
+
+.boton-registro {
+    padding: 10px 20px;
+    background-color: #eeeeee;
+    color: #333;
+    border: 2px solid #c800ff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-registro:hover {
+    background-color: #f0d5ff;
+}
+
+.btn-nav {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #6b00b3; /* morado oscuro */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #4d0087; /* un morado aún más oscuro al pasar el mouse */
+}
+
+.registro-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-registro p {
+    margin-bottom: 15px;
+}
+
+.form-registro input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.boton-registrar {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(90deg, #8a00ff, #d000ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.boton-registrar:hover {
+    background: linear-gradient(90deg, #6b00cc, #b000cc);
+}
+
+.texto-volver {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.boton-volver {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 8px;
+    background-color: transparent;
+    border: 2px solid #8a00ff;
+    border-radius: 8px;
+    color: #8a00ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+    background-color: #8a00ff;
+    color: white;
+}
+
+.cregistro {
+    color:#6b00cc;/* o el que prefieras */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buscar-btn,
+.reiniciar-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;   /* quita el subrayado del <a> */
+    display: inline-block;
+    min-width: 100px;
+}
+
+.buscar-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.reiniciar-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.profile-img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #6b00b3;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-admin {
+    background-color: #ffcc00;  /* Amarillo dorado */
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admin:hover {
+    background-color: #e6b800;
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: #6b00b3;
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #4e0089;
+    color: white;
+    text-decoration: none;
+}
